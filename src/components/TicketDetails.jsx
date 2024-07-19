@@ -44,10 +44,10 @@ export default function TicketDetails({onClose,itemId}) {
     <Card sx={{ maxWidth: '40%',padding:2,border:2,borderRadius:4 ,bgcolor:'midnightblue'}}>
       <CardHeader
         avatar={
-          <Avatar src={KaptureLogo}/>
+          <Avatar src={KaptureLogo} style={{height:50,width:50}}/>
         }
-        title=<span style={{color:'white'}}>{selectedItem.title}</span>
-        subheader=<span style={{color:'white'}}>{selectedItem.due_date}</span>
+        title=<span style={{color:'white',fontWeight: 'bold', fontSize: '20px'}}>{selectedItem.title}</span>
+        subheader=<span style={{color:'white'}}>Due :{selectedItem.due_date}</span>
         action={
             <CloseIcon onClick={onClose} style={{color:'white'}}/>
         }
